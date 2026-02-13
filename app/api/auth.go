@@ -37,7 +37,7 @@ func Login(c *gin.Context){
 	if hash(body.Password) == passwordFromDB {
 		c.JSON(200, gin.H{
 			"code": 200,
-			"message": "OK",
+			"token": "fake token",
 		})
 		return
 	}
